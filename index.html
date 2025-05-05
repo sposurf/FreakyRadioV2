@@ -1,16 +1,65 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html>
-
+<html lang="it">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Titolo e PWA manifest -->
+  <title>Freaky Radio</title>
+  <link rel="manifest" href="/public/manifest.json">
+  <meta name="theme-color" content="#1DB954">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Stile principale -->
+  <link rel="stylesheet" href="/style.css">
+  <!-- Icona per browser e desktop -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/logo-192.png">
+  <!-- Icona per iOS Home screen -->
+  <link rel="apple-touch-icon" href="/logo-192.png">
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
-</body>
+  <div class="app-container">
+    <header>
+      <img src="/logo.png" alt="Logo Radio" class="logo">
+      <h1>Freaky Radio - Il Gusto che Suona</h1>
+    </header>
 
+    <main>
+      <audio id="player" controls preload="none">
+        <source src="https://a11.asurahosting.com:7520/radio.mp3" type="audio/mpeg">
+        Il tuo browser non supporta l'elemento audio.
+      </audio>
+      <button id="installBtn">📥 Segui le Istruzioni</button>
+    </main>
+
+    <section id="install-instructions">
+      <h2>Istruzioni di installazione
+      per ascoltare senza interruzioni</h2>
+      <div class="instructions">
+        <div class="instruction">
+          <h3>Android (Chrome)</h3>
+          <ol>
+            <li>Apri il menu ⋮ in alto a destra.</li>
+            <li>Seleziona “Aggiungi a schermata Home”.</li>
+            <li>Conferma e troverai l’icona sulla Home.</li>
+          </ol>
+        </div>
+        <div class="instruction">
+          <h3>iOS (Safari)</h3>
+          <ol>
+            <li>Tocca il pulsante di Condivisione (⬆️).</li>
+            <li>Scegli “Aggiungi a Home”.</li>
+            <li>Conferma: l’icona apparirà sulla Home.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
 </html>
