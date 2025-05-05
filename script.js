@@ -2,7 +2,7 @@
 
 // 1) Register service worker
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/public/service-worker.js')
+  navigator.serviceWorker.register('service-worker.js')
     .then(() => console.log('SW registered'))
     .catch(console.error);
 }
@@ -14,8 +14,8 @@ if ('mediaSession' in navigator) {
     title:  'Freaky Radio',
     artist: 'Live Streaming',
     artwork: [
-      { src: '/logo-192.png', sizes: '192x192', type: 'image/png' },
-      { src: '/logo-512.png', sizes: '512x512', type: 'image/png' }
+      { src: 'logo-192.png', sizes: '192x192', type: 'image/png' },
+      { src: 'logo-512.png', sizes: '512x512', type: 'image/png' }
     ]
   });
   navigator.mediaSession.setActionHandler('play',  () => audio.play());
